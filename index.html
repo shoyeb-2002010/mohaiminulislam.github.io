@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohaiminul Islam | Agronomy Researcher</title>
+<meta name="description" content="Mohaiminul Islam, M.Sc. student in Agronomy at Bangladesh Agricultural University. Research on intercropping, nutrient management and water management for smallholder farming.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f7f1; --surface:#ffffff; --ink:#1c2a21; --muted:#56655b; --line:#d5ddd0;
+  --maize:#d4a62a; --soy:#5b8a3c; --soil:#6a4e38; --link:#2f6b2a;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#131a15; --surface:#1b241e; --ink:#e8efe6; --muted:#a2b0a5; --line:#2c3930;
+    --maize:#e0b83f; --soy:#7fb15a; --soil:#b89677; --link:#8fcf72;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--sans)}
+a{color:var(--link);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--maize);outline-offset:2px}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+
+/* top bar */
+header.bar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.bar .wrap{display:flex;gap:20px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.brand{font-family:var(--serif);font-weight:600;font-size:1.1rem;color:var(--ink);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.92rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink);text-decoration:underline}
+
+/* hero */
+.hero{padding:64px 0 0}
+.hero .wrap{display:grid;grid-template-columns:1fr 170px;gap:36px;align-items:center}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.05;margin:0 0 14px;letter-spacing:-.01em}
+.lead{font-family:var(--serif);font-size:1.3rem;line-height:1.45;margin:0 0 18px;max-width:34em}
+.meta{color:var(--muted);margin:0 0 22px;font-size:.98rem}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:9px 16px;border:1.5px solid var(--ink);border-radius:6px;color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--soy)}
+.photo{width:170px;height:170px;border-radius:50%;overflow:hidden;background:var(--soy);color:#fff;display:grid;place-items:center;font:600 3rem var(--serif);border:4px solid var(--surface);box-shadow:0 0 0 1.5px var(--line)}
+.photo{position:relative}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+
+/* the crop rows: alternating maize and soybean strips */
+.rows{height:84px;margin-top:56px;
+  background:repeating-linear-gradient(100deg,
+    var(--maize) 0 14px, transparent 14px 30px,
+    var(--soy) 30px 40px, transparent 40px 56px);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 70%);
+          mask-image:linear-gradient(to bottom,transparent,#000 70%);
+  opacity:.85}
+
+/* sections */
+section{padding:52px 0 8px}
+h2{font-family:var(--serif);font-size:1.9rem;line-height:1.2;margin:0 0 20px;padding-bottom:10px;border-bottom:2px solid var(--soy)}
+h3{font-family:var(--serif);font-size:1.2rem;line-height:1.3;margin:0 0 4px}
+p{margin:0 0 14px}
+.item{padding:18px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.when{color:var(--muted);font-size:.92rem;margin:0 0 8px}
+.role{display:inline-block;font-size:.82rem;font-weight:600;color:var(--soil);border:1px solid var(--soil);border-radius:20px;padding:0 9px;margin-left:6px;vertical-align:2px}
+ul{margin:8px 0 0;padding-left:1.2em}
+li{margin:4px 0}
+.feature{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--maize);border-radius:6px;padding:22px 24px}
+.feature h3{font-size:1.35rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px 32px}
+.skills h3{font-size:1.05rem}
+.skills p{margin:0;color:var(--muted);font-size:.96rem}
+.pub{margin:0 0 16px;padding-left:16px;border-left:3px solid var(--line)}
+.pub .t{font-weight:600}
+.pub .j{font-style:italic}
+.pub .s{color:var(--muted);font-size:.9rem}
+.contact p{margin:0 0 8px}
+footer{margin-top:56px;padding:22px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+
+@media (max-width:640px){
+  body{font-size:16px}
+  .hero{padding-top:36px}
+  .hero .wrap{grid-template-columns:1fr}
+  .photo{order:-1;width:120px;height:120px;font-size:2.2rem}
+  header.bar .wrap{flex-direction:column;align-items:flex-start;gap:6px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Mohaiminul Islam</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Mohaiminul Islam</h1>
+        <p class="lead">I run field experiments on intercropping, nutrient management and water use, with a focus on smallholder farms in South Asia.</p>
+        <p class="meta">M.Sc. student in Agronomy and Graduate Research Assistant, Bangladesh Agricultural University, Mymensingh</p>
+        <div class="btns">
+          <a class="btn main" href="CV_Mohaiminul_Islam.pdf">Download CV</a>
+          <a class="btn" href="mailto:mohaiminul.2002010@bau.edu.bd">Email me</a>
+        </div>
+      </div>
+      <!-- Put your photo in the same folder and name it photo.jpg. Until then, initials show. -->
+      <div class="photo" aria-label="Photo of Mohaiminul Islam">
+        <span aria-hidden="true">MI</span>
+        <img src="photo.jpg" alt="Mohaiminul Islam" onerror="this.remove()">
+      </div>
+    </div>
+    <div class="rows" aria-hidden="true"></div>
+  </div>
+
+  <div class="wrap">
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I am an agronomy researcher at Bangladesh Agricultural University. My work covers nutrient management, crop spatial arrangement, biological inputs and water management across different cropping systems and agroecologies.</p>
+      <p>I design and run my own field trials, measure crop response in the field, and analyze the data in R. I also use Google Earth Engine and QGIS for geospatial work. I am looking for graduate research positions where I can keep working on resource-efficient cropping systems.</p>
+      <p>Education: M.Sc. in Agronomy, Bangladesh Agricultural University (November 2025 to April 2027, expected). B.Sc. in Agriculture, Bangladesh Agricultural University (January 2020 to October 2025).</p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <div class="feature">
+        <h3>M.Sc. thesis: row orientation and row arrangement in maize-soybean intercropping</h3>
+        <p class="when">Advisor: Prof. Dr. Md. Harun Or Rashid, Department of Agronomy, BAU</p>
+        <p>The thesis asks how the direction and layout of crop rows change the way maize and soybean share light, and what that means for yield.</p>
+        <ul>
+          <li>Tests combinations of row orientation and row arrangement at different inter-row spacings.</li>
+          <li>Measures light (PAR) at several canopy depths and chlorophyll (SPAD) in both crops.</li>
+          <li>Links light differences from row orientation to leaf nitrogen and yield.</li>
+        </ul>
+      </div>
+      <p style="margin-top:18px">Across my work, the common thread is getting more from limited land, water and fertilizer on small farms.</p>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <!-- Update the status line on each item if it changes. -->
+      <div class="pub">
+        <div class="t">Effect of row-orientation and NPK fertilizer levels on the performance of maize-soybean intercropping system</div>
+        <div><strong>Mohaiminul Islam</strong>, M. Nishita Yeasmin Ria, Miftahul Jannat, Md. Nayan, Md. Delwar Hossain, Nadia Islam, F.M. Jamil Uddin, Md. Harun Rashid*</div>
+        <div><span class="j">Oil Crop Science</span>. First author. <a href="https://doi.org/10.1016/j.ocsci.2026.09.001">doi.org/10.1016/j.ocsci.2026.09.001</a></div>
+      </div>
+      <div class="pub">
+        <div class="t">Synergistic effects of arbuscular mycorrhizal fungi and foliar nitrogen-phosphorus application on maize productivity under irrigated and rainfed conditions</div>
+        <div>Mst. Lailatul Ferdows, Saima Biswas, Md. Mizanur Rahman, F.M. Jamil Uddin, Aporna Tabassum Api, Md. Nayan, <strong>Mohaiminul Islam</strong>, Nadia Islam, Swapan Kumar Paul, Md. Harun Rashid*</div>
+        <div><span class="j">International Journal of Plant Biology</span>. Co-author. <a href="https://doi.org/10.3390/ijpb17070054">doi.org/10.3390/ijpb17070054</a></div>
+      </div>
+      <div class="pub">
+        <div class="t">Effect of phosphorus and silicon fertilisation on productivity of boro rice (Oryza sativa L.)</div>
+        <div>Mst. Lailatul Ferdows, Anika Farhana, Farhana Zaman, <strong>Mohaiminul Islam</strong>, Md. Nayan, Nadia Islam, Md. Harun Rashid*</div>
+        <div><span class="j">Research on Crops</span>. Co-author. <span class="s">Accepted</span></div>
+      </div>
+      <h3 style="margin-top:26px">Conference poster</h3>
+      <div class="pub" style="margin-top:10px">
+        <div class="t">Effect of mulching on the performance of maize-French bean intercropping system</div>
+        <div>Islam Sazol, Md. Shafiqul Islam, <strong>Mohaiminul Islam</strong>, Md. Harun Rashid (2025)</div>
+      </div>
+      <p><a href="#">Google Scholar profile</a></p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="item">
+        <h3>Seed priming and foliar zinc and silicon in rainfed maize <span class="role">First author</span></h3>
+        <p class="when">Graduate Research Assistant, 2025 to present</p>
+        <p>Field trials on how micronutrient treatments help maize cope with water-scarce, rainfed conditions. I compared application methods to find the combination that kept plant vigor and yield highest under moisture stress.</p>
+      </div>
+
+      <div class="item">
+        <h3>Mulching in rainfed maize-cowpea intercropping <span class="role">Co-author</span></h3>
+        <p class="when">Graduate Research Assistant, 2025 to present</p>
+        <p>Compared plastic film and straw mulch for soil moisture, soil temperature and weed control, and found which mulch and crop pairings gave the best resource-use efficiency and productivity.</p>
+      </div>
+
+      <div class="item">
+        <h3>Row orientation and NPK levels in maize-soybean intercropping <span class="role">First author</span></h3>
+        <p class="when">Undergraduate Research Assistant, 2023 to 2025</p>
+        <p>Tested row orientations and fertilizer combinations for light distribution and canopy stability, then combined yield and cost data to find the practices with the best land-use efficiency and economic return.</p>
+      </div>
+
+      <div class="item">
+        <h3>Mycorrhizal fungi with foliar nitrogen and phosphorus in maize <span class="role">Co-author</span></h3>
+        <p class="when">Undergraduate Research Assistant, 2023 to 2025</p>
+        <p>Managed trials under irrigated and rainfed conditions to see how water stress changed nutrient uptake at key growth stages. Analysis used redundancy analysis and DHARMa diagnostics in R.</p>
+      </div>
+
+      <div class="item">
+        <h3>Phosphorus and silicon in boro rice <span class="role">Co-author</span></h3>
+        <p class="when">Undergraduate Research Assistant, 2023 to 2025</p>
+        <p>Evaluated fertilizer doses and foliar applications at the tillering and panicle initiation stages.</p>
+      </div>
+
+      <div class="item">
+        <h3>ACIAR and RDRS Bangladesh funded projects</h3>
+        <p>Funded by the Australian Centre for International Agricultural Research (ACIAR) and RDRS Bangladesh.</p>
+        <ul>
+          <li>Designed a low-cost drip irrigation system scaled to smallholder plots, to support nutrition and income in women-led households.</li>
+          <li>Evaluated mulching regimes in eggplant for yield and resource efficiency.</li>
+          <li>Used farmer feedback on land size and cropping preferences to design more realistic field trials.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="item">
+        <h3>Graduate Research Assistant, Department of Agronomy</h3>
+        <p class="when">Bangladesh Agricultural University, Mymensingh. November 2025 to present</p>
+        <p>Leading and supporting field experiments on intercropping, micronutrients and mulching in maize-based systems.</p>
+      </div>
+
+      <div class="item">
+        <h3>Undergraduate Research Assistant, Department of Agronomy</h3>
+        <p class="when">Bangladesh Agricultural University, Mymensingh. November 2023 to November 2025</p>
+        <p>Ran field trials on nutrient management, row orientation, biological inputs and rice fertilization.</p>
+      </div>
+
+      <div class="item">
+        <h3>Intern, Department of Agricultural Extension</h3>
+        <p class="when">Tarakanda, Mymensingh. April 2025 to July 2025</p>
+        <ul>
+          <li>Supported Partner Field School activities and field demonstrations of sustainable farming practices.</li>
+          <li>Ran Integrated Pest Management field assessments using light and pheromone traps.</li>
+          <li>Helped put Alternate Wetting and Drying irrigation into practice.</li>
+          <li>Practiced grafting and nursery management under Good Agricultural Practices, and used vermicomposting for soil health and organic waste.</li>
+        </ul>
+      </div>
+
+      <h3 style="margin-top:26px">Awards and certifications</h3>
+      <ul>
+        <li>BAU Merit Scholarship, Bangladesh Agricultural University, 2020 to 2025</li>
+        <li>Field-Level Agricultural Extension Work, Department of Agricultural Extension, Bangladesh, January 2025</li>
+        <li>Internship Program, Faculty of Agriculture, Bangladesh Agricultural University, March to June 2025</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><h3>Statistics and programming</h3><p>R (ANOVA, linear mixed-effects models, redundancy analysis, DHARMa diagnostics). Python for data analysis, visualization and wrangling.</p></div>
+        <div><h3>Geospatial</h3><p>Google Earth Engine and QGIS: vegetation indices, TVDI, interpolation, land cover, slope and aspect.</p></div>
+        <div><h3>Field instruments</h3><p>SPAD meter, handheld GPS (Garmin eTrex 10), portable photosynthesis analyzer (PAR).</p></div>
+        <div><h3>Writing and software</h3><p>LaTeX, Microsoft Office, EndNote, Mendeley.</p></div>
+        <div><h3>Languages</h3><p>English: IELTS 7.5 overall (Listening 8.5, Speaking 8.0, Reading 7.5, Writing 6.5). Bengali: native.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>If you are recruiting graduate students or research assistants in cropping systems, nutrient or water management, I would be glad to hear from you.</p>
+      <p>Email: <a href="mailto:mohaiminul.2002010@bau.edu.bd">mohaiminul.2002010@bau.edu.bd</a></p>
+      <p>Links: <a href="#">LinkedIn</a>, <a href="#">Google Scholar</a>, <a href="CV_Mohaiminul_Islam.pdf">CV (PDF)</a></p>
+      <p>Based in Dhaka, Bangladesh. Studying at Bangladesh Agricultural University, Mymensingh.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Mohaiminul Islam</div>
+</footer>
+
+</body>
+</html>
